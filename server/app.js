@@ -1,6 +1,18 @@
+import dotenv from 'dotenv'
+dotenv.config()
 import express from 'express'
 import cors from 'cors'
 import helloRoute from './api/routes/helloRoute.js'
+import { connectDB } from './configs/database.js'
+
+// connecting database
+connectDB()
+  .then((res) => {
+    console.log(res)
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 
 // creating express App
 const app = express()

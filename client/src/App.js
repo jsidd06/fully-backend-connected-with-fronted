@@ -14,9 +14,19 @@ function App() {
   return (
     <div className="App">
       <h1>messages from backend</h1>
-      {data.message.map((message, index) => (
-        <li key={index}>{message}</li>
-      ))}
+      <ul
+        style={{
+          padding: '20 px 50px',
+          backgroundColor: '#f4f4f4',
+          textAlign: 'center',
+        }}
+      >
+        {data.message.map((message, index) => (
+          <li style={{ color: '$f1f1f1' }} key={index}>
+            {message}
+          </li>
+        ))}
+      </ul>
     </div>
   )
 }
