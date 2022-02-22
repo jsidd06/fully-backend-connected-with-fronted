@@ -21,7 +21,7 @@ function App() {
           textAlign: 'center',
         }}
       >
-        {data.message.map((message, index) => (
+        {data.message.map(({ message }, index) => (
           <li style={{ color: '$f1f1f1' }} key={index}>
             {message}
           </li>
